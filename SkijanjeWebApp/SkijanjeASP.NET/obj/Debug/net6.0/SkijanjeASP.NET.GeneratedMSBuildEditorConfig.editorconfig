@@ -1,0 +1,176 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SkijanjeASP.NET
+build_property.RootNamespace = SkijanjeASP.NET
+build_property.ProjectDir = C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeASP.NET\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeASP.NET
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Home/Icons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJY29ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Home/Maps.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYXBzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Home/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Home/Status404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdGF0dXM0MDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Home/Status4xx.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdGF0dXM0eHguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Home/Tables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUYWJsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Home/Upgrade.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVcGdyYWRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/Auth/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEF1dGhcX0Zvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/Auth/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEF1dGhcX0hlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/Auth/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEF1dGhcX05hdmJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/Topnav/_CurrentUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRvcG5hdlxfQ3VycmVudFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/Topnav/_Dropdown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRvcG5hdlxfRHJvcGRvd24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/Topnav/_Links.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRvcG5hdlxfTGlua3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/Topnav/_Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRvcG5hdlxfU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/Topnav/_Topnav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRvcG5hdlxfVG9wbmF2LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/Topnav/_TopnavProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRvcG5hdlxfVG9wbmF2UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_Breadcrumbs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CcmVhZGNydW1icy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_CookieConsentPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db29raWVDb25zZW50UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_Dropdown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ecm9wZG93bi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_ExternalScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FeHRlcm5hbFNjcmlwdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_GoogleTagManagerBodyElement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Hb29nbGVUYWdNYW5hZ2VyQm9keUVsZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_IdentityLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9JZGVudGl0eUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_LayoutProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_NavbarUserInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXJVc2VySW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_OpenGraph.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9PcGVuR3JhcGguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_PageHeadElement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdlSGVhZEVsZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_Sidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWRlYmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_Sidenav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWRlbmF2LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_ThemeScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UaGVtZVNjcmlwdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_ThemeStyles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UaGVtZVN0eWxlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/SkijanjeWebApp/SkijanjeASP.NET/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ej8tmynnos

@@ -1,0 +1,35 @@
+﻿@using SkijanjeASPNET.Models
+
+@model InstruktorVM
+
+
+
+<form action="/Instrukcija/Spremi">
+  <div class="form-group">
+    <label for="datumOdr">Datum održavanja</label>
+    <input name="datum" type="date" class="form-control" id="datumOdr">
+  </div>
+   <div class="form-group">
+    <label for="vrijemeOdr">Vrijeme održavanja</label>
+    <input name="vrijeme" type="time" class="form-control" id="vrijemeOdr">
+  </div>
+    <div class="form-group">
+    <label for="brojCas">Broj časova</label>
+    <input name="brojCas" type="number" class="form-control" id="brojCas">
+  </div>
+    <div class="form-group">
+    <label for="inst">Instruktor</label>
+   <select name="instruktor" class="form-control" id="inst">
+       @foreach(InstruktorImeVM i in Model.InstruktorImePrezime)
+            {
+                <option value="@i.ImePrezime">@i.ImePrezime</option>
+            }
+        </select>
+  </div>
+  <div class="form-group">
+    <label for="biljeske">Bilješke</label>
+    <textarea name="biljeske" class="form-control" id="biljeske"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Spasi</button>
+</form>

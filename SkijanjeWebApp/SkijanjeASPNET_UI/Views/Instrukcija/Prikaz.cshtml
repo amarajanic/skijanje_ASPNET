@@ -1,0 +1,95 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@using SkijanjeASPNET.Models
+
+@model SkijanjeASPNET.Models.InstrukcijaVM
+
+<form><label style="margin:10px">Instruktor:</label>
+
+<select name="i">
+    @foreach(InstruktorImeVM i in Model.Instruktori)
+        {
+            <option value="@i.ImePrezime">@i.ImePrezime</option>
+        }
+    </select>
+
+<label style="margin:10px">Start date:</label>
+<input type="date" name="p" value="@Model.datumPocetak"/>
+<label style="margin:10px">End date:</label>
+<input type="date" name="k" value="@Model.datumKraj"/>
+<input style="margin:10px" type="submit" value="Pretraži" class="btn btn-primary"/>
+</form>
+
+
+
+<br>
+
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Datum održavanja</th>
+            <th>Vrijeme održavanja</th>
+            <th>Broj časova</th>
+            <th>Broj učenika</th>
+            <th style="text-align: center">Akcije</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+         @foreach(InstrukcijaPrikazVM i in Model.InstrukcijaPrikaz)
+    {
+       
+ <tr>
+            <td>@i.Ime</td>
+            <td>@i.Prezime</td>
+            <td>@i.DatumOdr</td>
+            <td>@i.Termin</td>
+            <td>@i.BrCas</td>
+            <td>@i.BrUcen</td>
+
+            <form action="Detalji">
+            <td><button type="submit" class ="btn btn-secondary" onclick="checkButton()">Detalji</button></td>
+            <input name="id" type="hidden" class="form-control" id="id" value="@i.Id"/>
+              </form> 
+
+            <form action="Uredi">
+            <td><button type="submit" class ="btn btn-secondary" onclick="checkButton()">Uredi</button></td>
+            <input name="id" type="hidden" class="form-control" id="id" value="@i.Id"/>
+            </form>
+
+             <form action="Ucenici">
+            <td><button type="submit" class ="btn btn-secondary" onclick="checkButton()">Učenici</button></td>
+            <input name="id" type="hidden" class="form-control" id="id" value="@i.Id"/>
+            </form>
+
+            <form action="Obrisi">
+            <td><button type="submit" class ="btn btn-secondary" onclick="checkButton()">Obriši</button></td>
+            <input name="id" type="hidden" class="form-control" id="id" value="@i.Id"/>
+            </form>
+
+        </tr>
+       }
+       
+       
+
+  
+    </tbody>
+   
+</table>
+
+<script type="text/javascript">
+function checkButton() {
+    if (document.getElementById('Detalji').clicked == true) {
+        alert("detalji");
+    }
+    else if (document.getElementById('Uredi').clicked == true) {
+        alert("uredi");
+    }
+
+</script>

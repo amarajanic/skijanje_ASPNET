@@ -1,0 +1,57 @@
+﻿@using SkijanjeASPNET.Models
+@using SkijanjeLibrary.Models
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var spolovi = (string[])ViewData["spolovi"];
+}
+
+@model InstruktorVM
+
+
+<form asp-action="Snimi" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="ime">Ime</label>
+    <input asp-for="InstruktorDodaj.Ime" class="form-control" type="text">
+  </div>
+   <div class="form-group">
+    <label for="prezime">Prezime</label>
+    <input asp-for="InstruktorDodaj.Prezime" class="form-control" type="text">
+  </div>
+    <div class="form-group">
+    <label for="datRodj">Datum rođenja</label>
+    <input asp-for="InstruktorDodaj.DatRodj" class="form-control" type="date">
+  </div>
+    <div class="form-group">
+    <label for="spol">Spol</label>
+   <select asp-for="InstruktorDodaj.Spol" class="form-control">
+       @foreach(string i in Model.Spolovi)
+            {
+                <option value="@i">@i</option>
+            }
+        </select>
+  </div>
+  <div class="form-group">
+    <label for="kontaktTel">Kontakt telefon</label>
+  <input asp-for="InstruktorDodaj.KontaktTel" class="form-control" type="tel"/>
+  </div>
+  <div class="form-group">
+    <label for="skijIsk">Skijaško iskustvo</label>
+    <input asp-for="InstruktorDodaj.SkijIsk" class="form-control" type="date">
+  </div>
+
+  <div class="form-group">
+    <label for="biografija">Biografija</label>
+    <textarea asp-for="InstruktorDodaj.Biografija" class="form-control"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="cv">Curriculum Vitae</label>
+    <input asp-for="InstruktorDodaj.Cv" class="form-control">
+  </div>
+
+ 
+
+  <button type="submit" class="btn btn-primary">Spasi</button>
+</form>

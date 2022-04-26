@@ -1,0 +1,294 @@
+CREATE DATABASE skijanje_db_ASPNET
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_United Kingdom.1252'
+    LC_CTYPE = 'English_United Kingdom.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+	
+	
+CREATE TABLE Instrukcija (ID SERIAL NOT NULL, Datum_odr date, Termin time(7), Broj_cas int4, Biljeske text, InstruktorID int4 NOT NULL, PRIMARY KEY (ID));
+CREATE TABLE Instruktor (ID SERIAL NOT NULL, Ime varchar(50), Prezime varchar(100), Dat_rodj date, Spol varchar(10), Kontakt_tel varchar(50), Skij_isk date, Biografija varchar(255), CV bytea, PRIMARY KEY (ID));
+CREATE TABLE Licenca (ID SERIAL NOT NULL, Licenca_id varchar(255), Naziv_licence varchar(50), Opis varchar(255), InstruktorID int4 NOT NULL, PRIMARY KEY (ID));
+
+CREATE TABLE Oprema (ID SERIAL NOT NULL, Naziv varchar(50), Cijena float8, Kolicina int4, MarkaID int4, ModelID int4, PRIMARY KEY (ID));
+
+CREATE TABLE Marka (ID SERIAL NOT NULL, Naziv varchar(50), PRIMARY KEY (ID));
+CREATE TABLE Model (ID SERIAL NOT NULL, Naziv varchar(50), PRIMARY KEY (ID));
+
+CREATE TABLE KorisnickiNalog (ID SERIAL NOT NULL, Username varchar(50), Password varchar(50));
+
+CREATE TABLE Oprema_Ucenik (ID SERIAL NOT NULL, Kolicina int4, Dat_izd date, OpremaID int4 NOT NULL, UcenikID int4 NOT NULL, InstrukcijaID int4, PRIMARY KEY (ID));
+
+CREATE TABLE Ucenik (ID SERIAL NOT NULL, Ime varchar(50), Prezime varchar(100), Dat_rodj date, Spol varchar(10), Kontakt_tel varchar(50), PRIMARY KEY (ID));
+CREATE TABLE Ucenik_Instrukcija (UcenikID int4 NOT NULL, InstrukcijaID int4 NOT NULL, PRIMARY KEY (UcenikID, InstrukcijaID));
+ALTER TABLE Instrukcija ADD CONSTRAINT FKInstrukcij844282 FOREIGN KEY (InstruktorID) REFERENCES Instruktor (ID) on delete cascade;
+ALTER TABLE Licenca ADD CONSTRAINT FKLicenca261033 FOREIGN KEY (InstruktorID) REFERENCES Instruktor (ID) on delete cascade;
+ALTER TABLE Ucenik_Instrukcija ADD CONSTRAINT FKUcenik_Ins700545 FOREIGN KEY (UcenikID) REFERENCES Ucenik (ID) on delete cascade;
+ALTER TABLE Ucenik_Instrukcija ADD CONSTRAINT FKUcenik_Ins644940 FOREIGN KEY (InstrukcijaID) REFERENCES Instrukcija (ID) on delete cascade;
+
+ALTER TABLE Oprema ADD CONSTRAINT FKOprema08012022 FOREIGN KEY (MarkaID) REFERENCES Marka (ID) on delete cascade;
+ALTER TABLE Oprema ADD CONSTRAINT FKOprema16012022 FOREIGN KEY (ModelID) REFERENCES Model (ID) on delete cascade;
+
+
+
+
+
+ALTER TABLE Oprema_Ucenik ADD CONSTRAINT FKOprema_Uce22379 FOREIGN KEY (OpremaID) REFERENCES Oprema (ID) on delete cascade;
+ALTER TABLE Oprema_Ucenik ADD CONSTRAINT FKOprema_Uce295950 FOREIGN KEY (UcenikID) REFERENCES Ucenik (ID) on delete cascade;
+ALTER TABLE Oprema_Ucenik ADD CONSTRAINT FKOprema_Uce08012022 FOREIGN KEY (InstrukcijaID) REFERENCES Instrukcija (ID) on delete cascade;
+
+
+
+
+
+
+INSERT INTO Instruktor(Ime, Prezime, Dat_rodj, Spol, Kontakt_tel, Skij_isk, Biografija) VALUES ('Amar', 'Ajanic', NOW(), 'Musko', '34884834', NOW(), 'TESTNI TEXT');
+INSERT INTO Instruktor(Ime, Prezime, Dat_rodj, Spol, Kontakt_tel, Skij_isk, Biografija) VALUES ('Nermin', 'Fazlic', NOW(), 'Musko', '325345', NOW(), 'TESTNI 02');
+INSERT INTO Instruktor(Ime, Prezime, Dat_rodj, Spol, Kontakt_tel, Skij_isk, Biografija) VALUES ('Selma', 'Saric', NOW(), 'Zensko', '312121212', NOW(), 'TESTNI 03');
+INSERT INTO Instruktor(Ime, Prezime, Dat_rodj, Spol, Kontakt_tel, Skij_isk, Biografija) VALUES ('Armin', 'Santic', NOW(), 'Musko', '55555155', NOW(), 'TESTNI TEXT 04');
+
+INSERT INTO Ucenik(Ime, Prezime, Dat_rodj, Spol, Kontakt_tel) VALUES ('Suljo', 'Suljic', NOW(), 'Musko', '34884834');
+INSERT INTO Ucenik(Ime, Prezime, Dat_rodj, Spol, Kontakt_tel) VALUES ('Sinan', 'Turkic', NOW(), 'Musko', '12127643');
+INSERT INTO Ucenik(Ime, Prezime, Dat_rodj, Spol, Kontakt_tel) VALUES ('Alma', 'Simotic', NOW(), 'Zensko', '987654321');
+INSERT INTO Ucenik(Ime, Prezime, Dat_rodj, Spol, Kontakt_tel) VALUES ('Anita', 'Adlic', NOW(), 'Musko', '87594875');
+insert into ucenik(Ime, Prezime, Dat_rodj, Spol, Kontakt_tel) values ('Sanja', 'Savic', '1996-12-12', 'Zensko', '543434');
+insert into ucenik(Ime, Prezime, Dat_rodj, Spol, Kontakt_tel) values ('Malik', 'Nalik', '2002-11-01', 'Musko', '456745');
+insert into ucenik(Ime, Prezime, Dat_rodj, Spol, Kontakt_tel) values ('Ena', 'Krpic', '1991-01-19', 'Zensko', '1313131');
+
+INSERT INTO Marka (Naziv) VALUES ('Nike');
+INSERT INTO Marka (Naziv) VALUES ('Speedo');
+INSERT INTO Marka (Naziv) VALUES ('Puma');
+INSERT INTO Marka (Naziv) VALUES ('North Face');
+
+INSERT INTO Model (Naziv) VALUES ('F-15');
+INSERT INTO Model (Naziv) VALUES ('browns');
+INSERT INTO Model (Naziv) VALUES ('564');
+INSERT INTO Model (Naziv) VALUES ('Cool north');
+
+
+
+INSERT INTO Oprema(Naziv, Cijena, Kolicina, MarkaID, ModelID) VALUES ('Skije', 40.00, 3, 1, 1);
+INSERT INTO Oprema(Naziv, Cijena, Kolicina, MarkaID, ModelID) VALUES ('Jakna', 100.00, 5, 2, 2);
+INSERT INTO Oprema(Naziv, Cijena, Kolicina, MarkaID, ModelID) VALUES ('Cizme', 30.00, 4, 1, 3);
+INSERT INTO Oprema(Naziv, Cijena, Kolicina, MarkaID, ModelID) VALUES ('Stapovi', 50.00, 3, 2, 4);
+INSERT INTO Oprema(Naziv, Cijena, Kolicina, MarkaID, ModelID) VALUES ('Naocale', 20.00, 2, 1, 2);
+
+
+INSERT INTO Instrukcija(Datum_odr, Termin, Broj_cas, Biljeske, InstruktorID) VALUES (NOW(),NOW(),3,'TEST',1);
+INSERT INTO Instrukcija(Datum_odr, Termin, Broj_cas, Biljeske, InstruktorID) VALUES ('2020-01-03',NOW(),5,'TEST 02',3);
+INSERT INTO Instrukcija(Datum_odr, Termin, Broj_cas, Biljeske, InstruktorID) VALUES (NOW(),'17:44:57.372385',7,'TEST 05',2);
+INSERT INTO Instrukcija(Datum_odr, Termin, Broj_cas, Biljeske, InstruktorID) VALUES (NOW(),NOW(),2,'TEST 03',4);
+
+insert into licenca (licenca_id, naziv_licence, opis, instruktorid) values (1010,'skijaska_01','neki opis a', 1);
+insert into licenca (licenca_id, naziv_licence, opis, instruktorid) values (1212,'skijaska_03','neki opis b', 2);
+insert into licenca (licenca_id, naziv_licence, opis, instruktorid) values (1313,'skijaska_05','neki opis c', 3);
+insert into licenca (licenca_id, naziv_licence, opis, instruktorid) values (1414,'skijaska_06','neki opis d', 4);
+
+insert into Ucenik_Instrukcija values (1,1);
+insert into Ucenik_Instrukcija values (1,2);
+insert into Ucenik_Instrukcija values (2,1);
+insert into Ucenik_Instrukcija values (3,3);
+insert into Ucenik_Instrukcija values (3,2);
+insert into Ucenik_Instrukcija values (3,1);
+
+insert into Oprema_Ucenik (kolicina, dat_izd, opremaid, ucenikid, instrukcijaid) values (2,'2020-01-03', 1,1,1);
+insert into Oprema_Ucenik (kolicina, dat_izd, opremaid, ucenikid, instrukcijaid) values (1, CURRENT_DATE,2,1,2);
+insert into Oprema_Ucenik (kolicina, dat_izd, opremaid, ucenikid, instrukcijaid) values (4,'2019-01-01', 3,2,3);
+insert into Oprema_Ucenik (kolicina, dat_izd, opremaid, ucenikid, instrukcijaid) values (3, CURRENT_DATE, 4,3,2);
+insert into Oprema_Ucenik (kolicina, dat_izd, opremaid, ucenikid, instrukcijaid) values (1, CURRENT_DATE, 4,4,3);
+insert into Oprema_Ucenik (kolicina, dat_izd, opremaid, ucenikid, instrukcijaid) values (3, '12-01-2022', 3,3,3);
+
+insert into KorisnickiNalog (username, password) values ('admin', 'admin');
+
+select * from ucenik;
+
+select * from instruktor;
+
+select * from instrukcija;
+
+select * from licenca;
+
+select * from oprema;
+
+select * from ucenik_instrukcija;
+
+select * from oprema_ucenik;
+
+---------------------------------------------------------------
+
+
+create or replace function fn_Instrukcija_delete(identifikator int)
+returns void
+language plpgsql
+as
+$$
+declare 
+-- variable declaration
+
+begin
+
+DELETE FROM instrukcija
+where instrukcija.id = identifikator;
+
+
+end;
+$$
+
+
+
+create or replace function fn_Instrukcija_insert(datum_odr date, termin time, broj_cas int, biljeske text, instruktorId int)
+returns void
+language plpgsql
+as
+$$
+declare 
+-- variable declaration
+
+begin
+
+insert into Instrukcija(datum_odr, termin, broj_cas, biljeske, instruktorId)
+values (datum_odr, termin, broj_cas, biljeske, instruktorId);
+
+
+end;
+$$
+
+
+
+create or replace function fn_Instrukcija_select_by_id(instrukcija_id int)
+returns table(id int, ime varchar, prezime varchar, dat_odr date, termin time, br_cas int, br_ucen bigint, biljeske text )
+language plpgsql
+as
+$$
+declare 
+-- variable declaration
+
+begin
+
+return query select instrukcija.id, instruktor.ime, instruktor.prezime, instrukcija.datum_odr, instrukcija.termin, instrukcija.broj_cas, count(ucenik_instrukcija.ucenikid), instrukcija.biljeske
+from instrukcija 
+left join instruktor on instrukcija.instruktorid = instruktor.id 
+left join ucenik_instrukcija on instrukcija.id = ucenik_instrukcija.instrukcijaid
+where instrukcija.id = instrukcija_id
+group by instrukcija.id, instruktor.ime, instruktor.prezime;
+
+end;
+$$
+
+create or replace function fn_Instrukcija_update(identifikator int, d date, t time, bc int, b text, instruktor_id int)
+returns void
+language plpgsql
+as
+$$
+declare 
+-- variable declaration
+
+begin
+
+UPDATE Instrukcija
+SET datum_odr = d, termin = t, broj_cas = bc, biljeske = b, instruktorid = instruktor_id
+WHERE id = identifikator;
+
+
+
+end;
+$$
+
+
+create or replace function fn_Instruktor_insert(ime varchar, prezime varchar, dat_rodj date, spol varchar, kontakt_tel varchar, skij_isk date, biografija text, cv bytea)
+returns void
+language plpgsql
+as
+$$
+declare 
+-- variable declaration
+
+begin
+
+
+insert into Instruktor(ime, prezime, dat_rodj, spol, kontakt_tel, skij_isk, biografija, cv)
+values (ime, prezime, dat_rodj, spol, kontakt_tel, skij_isk, biografija, cv);
+
+
+
+end;
+$$
+
+create or replace function fn_Instruktor_select_by_ime_prezime_datum(i varchar, p varchar, pocetak date, kraj date)
+returns table(id int, ime varchar, prezime varchar, dat_odr date, termin time, br_cas int, br_ucen bigint, instruktorId int)
+language plpgsql
+as
+$$
+declare 
+-- variable declaration
+
+begin
+
+return query select instrukcija.id, instruktor.ime, instruktor.prezime, instrukcija.datum_odr, instrukcija.termin, instrukcija.broj_cas, count(ucenik_instrukcija.ucenikid), instrukcija.InstruktorId 
+from instrukcija 
+left join instruktor on instrukcija.instruktorid = instruktor.id 
+left join ucenik_instrukcija on instrukcija.id = ucenik_instrukcija.instrukcijaid
+where (instruktor.ime ilike '%'|| i ||'%' or i is null) and (instruktor.prezime ilike '%'|| p ||'%' or p is null) and (instrukcija.datum_odr between pocetak and kraj)
+group by instrukcija.id, instruktor.ime, instruktor.prezime;
+
+
+
+
+end;
+$$
+
+
+
+create or replace function fn_Ucenik_insert(ime varchar, prezime varchar, dat_rodj date, spol varchar, kontakt_tel varchar)
+returns void
+language plpgsql
+as
+$$
+declare 
+-- variable declaration
+
+begin
+
+insert into Ucenik(ime, prezime, dat_rodj, spol, kontakt_tel)
+values (ime, prezime, dat_rodj, spol, kontakt_tel);
+
+end;
+$$
+
+
+
+create or replace function fn_Ucenik_instrukcija_insert(ucenik_id integer, instrukcija_id integer)
+returns void
+language plpgsql
+as
+$$
+declare 
+-- variable declaration
+
+begin
+
+insert into ucenik_instrukcija(ucenikid, instrukcijaid)
+values (ucenik_id, instrukcija_id);
+
+end;
+$$
+
+create or replace function fn_Ucenik_select_by_instrukcija_id(identifikator int)
+returns table (id int, ime varchar, prezime varchar, dat_rodj date, spol varchar, kontakt_tel varchar)
+language plpgsql
+as
+$$
+declare 
+-- variable declaration
+
+begin
+
+return query select ucenik.id, ucenik.ime, ucenik.prezime, ucenik.dat_rodj, ucenik.spol, ucenik.kontakt_tel
+from ucenik join ucenik_instrukcija on ucenik.id = ucenik_instrukcija.ucenikid
+where ucenik_instrukcija.instrukcijaid = identifikator;
+
+end;
+$$
+

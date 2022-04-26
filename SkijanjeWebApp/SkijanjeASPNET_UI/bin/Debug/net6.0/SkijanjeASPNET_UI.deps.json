@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SkijanjeASPNET_UI/1.0.0": {
+        "runtime": {
+          "SkijanjeASPNET_UI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SkijanjeASPNET_UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

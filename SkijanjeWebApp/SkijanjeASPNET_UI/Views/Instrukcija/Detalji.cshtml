@@ -1,0 +1,70 @@
+﻿@using SkijanjeASPNET.Models
+
+@model InstrukcijaVM
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<h4>Podaci o instrukciji</h4>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Datum Održavanja</th>
+            <th>Termin</th>
+            <th>Broj časova</th>
+        
+                <th>Bilješke</th>
+
+        </tr>
+        
+      
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.InstrukcijaDetalji[0].DatumOdr.Value.ToString("dd/MM/yyyy")</td>
+            <td>@Model.InstrukcijaDetalji[0].Termin.Value.ToString(@"hh\:mm")</td>
+            <td>@Model.InstrukcijaDetalji[0].BrojCas</td>
+             <td>@Model.InstrukcijaDetalji[0].Biljeske</td>   
+
+        </tr>
+      
+       
+  
+    </tbody>
+   
+</table>
+<br />
+<h4>Učenici koji prisustvuju instrukciji</h4>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Datum rođenja</th>
+            <th>Spol</th>
+            <th>Kontakt telefon</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(UcenikPrikazVM u in Model.UcenikPrikaz)
+        {
+         <tr>
+            <td>@u.Ime</td>
+            <td>@u.Prezime</td>
+            @if(u.DatRodj != null)
+                {
+                    <td>@u.DatRodj.Value.ToString("dd/MM/yyyy")</td>
+                }
+                else
+                {
+                    <td>-</td>
+                }
+            <td>@u.Spol</td>
+            <td>@u.KontaktTel</td>        
+        </tr>
+        }
+       
+  
+    </tbody>
+   
+</table>

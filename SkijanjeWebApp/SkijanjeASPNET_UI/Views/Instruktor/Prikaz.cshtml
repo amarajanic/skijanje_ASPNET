@@ -1,0 +1,40 @@
+﻿@using SkijanjeASPNET.Models
+
+@model InstruktorVM
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Datum rođenja</th>
+            <th>Spol</th>
+            <th>Kontakt telefon</th>
+            <th>Skijaško iskustvo</th>
+            <th>Biografija</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+         @foreach(InstruktorPrikazVM i in Model.InstruktorPrikaz)
+    {
+        <tr>
+            <td>@i.Ime</td>
+            <td>@i.Prezime</td>
+            <td>@i.DatRodj.Value.ToString("dd/MM/yyyy")</td>
+            <td>@i.Spol</td>
+            <td>@i.KontaktTel</td>
+            <td>@i.SkijIsk.Value.ToString("dd/MM/yyyy")</td>
+            <td>@i.Biografija</td>
+          
+
+        </tr>
+    }
+    </tbody>
+   
+</table>

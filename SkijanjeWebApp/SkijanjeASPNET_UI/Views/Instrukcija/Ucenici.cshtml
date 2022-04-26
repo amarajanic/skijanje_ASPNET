@@ -1,0 +1,53 @@
+﻿@using SkijanjeASPNET.Models
+
+@model InstrukcijaVM
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<form action="/Instrukcija/SpasiUcenika"><label style="margin:10px">Učenici:</label>
+
+<select name="ime">
+    @foreach(UcenikImeVM i in Model.UceniciSvi)
+        {
+            <option value="@i.ImePrezime">@i.ImePrezime</option>
+        }
+    </select>
+    <input type="hidden" value="@Model.InstrukcijaId" name="id" />
+<input style="margin:10px" type="submit" value="Ubaci" class="btn btn-primary"/>
+</form>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Datum rođenja</th>
+            <th>Spol</th>
+            <th>Kontakt telefon</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(UcenikPrikazVM u in Model.UcenikPrikaz)
+        {
+         <tr>
+            <td>@u.Ime</td>
+            <td>@u.Prezime</td>
+            @if(u.DatRodj != null)
+                {
+                    <td>@u.DatRodj.Value.ToString("dd/MM/yyyy")</td>
+                }
+                else
+                {
+                    <td>-</td>
+                }
+            <td>@u.Spol</td>
+            <td>@u.KontaktTel</td>        
+        </tr>
+        }
+       
+  
+    </tbody>
+   
+</table>

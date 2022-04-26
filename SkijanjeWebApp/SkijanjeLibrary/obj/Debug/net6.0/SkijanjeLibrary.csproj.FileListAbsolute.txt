@@ -1,0 +1,14 @@
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\bin\Debug\net6.0\SkijanjeLibrary.deps.json
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\bin\Debug\net6.0\SkijanjeLibrary.dll
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\bin\Debug\net6.0\ref\SkijanjeLibrary.dll
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\bin\Debug\net6.0\SkijanjeLibrary.pdb
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\obj\Debug\net6.0\SkijanjeLibrary.csproj.AssemblyReference.cache
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\obj\Debug\net6.0\SkijanjeLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\obj\Debug\net6.0\SkijanjeLibrary.AssemblyInfoInputs.cache
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\obj\Debug\net6.0\SkijanjeLibrary.AssemblyInfo.cs
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\obj\Debug\net6.0\SkijanjeLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\obj\Debug\net6.0\SkijanjeLibrary.dll
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\obj\Debug\net6.0\ref\SkijanjeLibrary.dll
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\obj\Debug\net6.0\SkijanjeLibrary.pdb
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\bin\Debug\net6.0\SkijanjeLibrary.runtimeconfig.json
+C:\Users\Pc\source\repos\SkijanjeWebApp\SkijanjeLibrary\obj\Debug\net6.0\SkijanjeLibrary.genruntimeconfig.cache

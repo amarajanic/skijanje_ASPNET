@@ -1,0 +1,46 @@
+﻿@using SkijanjeASPNET.Models
+
+@model InstrukcijaVM
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+
+<form action="/Instrukcija/Snimi">
+  <div class="form-group">
+    <label for="datumOdr">Datum održavanja</label>
+    <input name="datum" type="date" class="form-control" id="datumOdr" value="@Model.InstrukcijaDetalji[0].DatumOdr.Value.ToString("yyyy-MM-dd")">
+  </div>
+   <div class="form-group">
+    <label for="vrijemeOdr">Vrijeme održavanja</label>
+    <input name="vrijeme" type="time" class="form-control" id="vrijemeOdr" value="@Model.InstrukcijaDetalji[0].Termin.Value.ToString()">
+  </div>
+    <div class="form-group">
+    <label for="brojCas">Broj časova</label>
+    <input name="brojCas" type="number" class="form-control" id="brojCas" value="@Model.InstrukcijaDetalji[0].BrojCas">
+  </div>
+    <div class="form-group">
+    <label for="inst">Instruktor</label>
+   <select name="instruktor" class="form-control" id="inst">
+      @foreach(InstruktorImeVM i in Model.Instruktori)
+            {
+                if(i.ImePrezime == Model.Instruktor.ImePrezime)
+                {
+                    <option value="@i.ImePrezime" selected>@i.ImePrezime</option>
+                }
+                else
+                {
+                <option value="@i.ImePrezime">@i.ImePrezime</option>
+                    
+                }
+            }
+        </select>
+  </div>
+  <div class="form-group">
+    <label for="biljeske">Bilješke</label>
+    <textarea name="biljeske" class="form-control" id="biljeske">@Model.InstrukcijaDetalji[0].Biljeske</textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Spasi</button>
+</form>
