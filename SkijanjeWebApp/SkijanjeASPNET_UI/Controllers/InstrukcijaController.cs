@@ -288,25 +288,27 @@ namespace SkijanjeASPNET.Controllers
             if (HttpContext.GetLogiraniKorisnik() == null)
                 return Redirect("/Autentifikacija/Index");
 
-            var model = new InstrukcijaVM { InstrukcijaId = id };
+         
 
-            return View("ObrisiPoruka", model);
+            return View("ObrisiPoruka",new InstrukcijaVM { InstrukcijaId = id});
+         
         }
 
-        public ActionResult ObrisiPoruka(InstrukcijaVM instrukcija)
+        public ActionResult ObrisiPoruka(int id)
+        {
+            if (HttpContext.GetLogiraniKorisnik() == null)
+                return Redirect("/Autentifikacija/Index");
+        
+
+            return View();
+        }
+
+        public ActionResult ObrisiPotvrda(int id)
         {
             if (HttpContext.GetLogiraniKorisnik() == null)
                 return Redirect("/Autentifikacija/Index");
 
-            return View(instrukcija);
-        }
-
-        public ActionResult ObrisiPotvrda(int instrukcijaId)
-        {
-            if (HttpContext.GetLogiraniKorisnik() == null)
-                return Redirect("/Autentifikacija/Index");
-
-            instrukcijaService.ObrisiInstrukciju(instrukcijaId);
+            instrukcijaService.ObrisiInstrukciju(id);
 
             return Redirect("/Instrukcija/Prikaz");
         }

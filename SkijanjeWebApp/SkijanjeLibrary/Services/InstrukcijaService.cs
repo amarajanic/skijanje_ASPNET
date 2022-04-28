@@ -23,9 +23,9 @@ namespace SkijanjeLibrary.Services
 
         public void UrediInstrukciju(Instrukcija i)
         {
-           //odraditi pomoću pg funkcije...
+          
             db.Instrukcijas.Update(i);
-            //db.Update(i);
+           
             db.SaveChanges();
         }
 
