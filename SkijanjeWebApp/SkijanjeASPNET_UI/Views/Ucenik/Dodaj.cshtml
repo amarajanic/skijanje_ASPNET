@@ -6,22 +6,22 @@
 
 @model UcenikVM
 
-<form asp-action="Snimi" enctype="multipart/form-data">
+<form id="ucenikDodaj" asp-action="Snimi" enctype="multipart/form-data">
   <div class="form-group">
     <label for="ime">Ime</label>
-    <input asp-for="UcenikDodaj.Ime" class="form-control" type="text">
+    <input id="ime" name="ime" asp-for="UcenikDodaj.Ime" class="form-control" type="text">
   </div>
    <div class="form-group">
     <label for="prezime">Prezime</label>
-    <input asp-for="UcenikDodaj.Prezime" class="form-control" type="text">
+    <input id="prezime" name="prezime" asp-for="UcenikDodaj.Prezime" class="form-control" type="text">
   </div>
     <div class="form-group">
     <label for="datRodj">Datum rođenja</label>
-    <input asp-for="UcenikDodaj.DatRodj" class="form-control" type="date">
+    <input id="datRodj" name="datRodj" asp-for="UcenikDodaj.DatRodj" class="form-control" type="date">
   </div>
     <div class="form-group">
     <label for="spol">Spol</label>
-   <select asp-for="UcenikDodaj.Spol" class="form-control">
+   <select id="spol" name="spol" asp-for="UcenikDodaj.Spol" class="form-control">
        @foreach(string i in Model.Spolovi)
             {
                 <option value="@i">@i</option>
@@ -30,7 +30,7 @@
   </div>
   <div class="form-group">
     <label for="kontaktTel">Kontakt telefon</label>
-  <input asp-for="UcenikDodaj.KontaktTel" class="form-control" type="tel"/>
+  <input id="kontaktTel" name="kontaktTel" asp-for="UcenikDodaj.KontaktTel" class="form-control" type="tel"/>
   </div>
   
 

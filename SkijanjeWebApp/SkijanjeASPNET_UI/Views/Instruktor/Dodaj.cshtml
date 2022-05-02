@@ -10,22 +10,22 @@
 @model InstruktorVM
 
 
-<form asp-action="Snimi" enctype="multipart/form-data">
+<form id="instruktorDodaj" asp-action="Snimi" enctype="multipart/form-data">
   <div class="form-group">
     <label for="ime">Ime</label>
-    <input asp-for="InstruktorDodaj.Ime" class="form-control" type="text">
+    <input id="ime" name="ime" asp-for="InstruktorDodaj.Ime" class="form-control" type="text">
   </div>
    <div class="form-group">
     <label for="prezime">Prezime</label>
-    <input asp-for="InstruktorDodaj.Prezime" class="form-control" type="text">
+    <input id="prezime" name="prezime" asp-for="InstruktorDodaj.Prezime" class="form-control" type="text">
   </div>
     <div class="form-group">
     <label for="datRodj">Datum rođenja</label>
-    <input asp-for="InstruktorDodaj.DatRodj" class="form-control" type="date">
+    <input id="datRodj" name="datRodj" asp-for="InstruktorDodaj.DatRodj" class="form-control" type="date">
   </div>
     <div class="form-group">
     <label for="spol">Spol</label>
-   <select asp-for="InstruktorDodaj.Spol" class="form-control">
+   <select id="spol" name="spol" asp-for="InstruktorDodaj.Spol" class="form-control">
        @foreach(string i in Model.Spolovi)
             {
                 <option value="@i">@i</option>
@@ -34,21 +34,21 @@
   </div>
   <div class="form-group">
     <label for="kontaktTel">Kontakt telefon</label>
-  <input asp-for="InstruktorDodaj.KontaktTel" class="form-control" type="tel"/>
+  <input id="kontaktTel" name="kontaktTel" asp-for="InstruktorDodaj.KontaktTel" class="form-control" type="tel"/>
   </div>
   <div class="form-group">
     <label for="skijIsk">Skijaško iskustvo</label>
-    <input asp-for="InstruktorDodaj.SkijIsk" class="form-control" type="date">
+    <input id="skijIsk" name="skijIsk" asp-for="InstruktorDodaj.SkijIsk" class="form-control" type="date">
   </div>
 
   <div class="form-group">
     <label for="biografija">Biografija</label>
-    <textarea asp-for="InstruktorDodaj.Biografija" class="form-control"></textarea>
+    <textarea id="bio" name="bio" asp-for="InstruktorDodaj.Biografija" class="form-control"></textarea>
   </div>
 
   <div class="form-group">
     <label for="cv">Curriculum Vitae</label>
-    <input asp-for="InstruktorDodaj.Cv" class="form-control">
+    <input id="cv" name="cv" asp-for="InstruktorDodaj.Cv" class="form-control">
   </div>
 
  
